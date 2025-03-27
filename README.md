@@ -128,6 +128,5 @@ backend/
 │── media/                    # Uploaded Screenshots
 │── manage.py                 # Django Command-Line Tool
 
-Best Practices Followed
 
 
