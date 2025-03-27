@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Task Submission{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2 class="text-center my-4">Submit Screenshot for: {{ task.app_name }}</h2>
+
+    <form action="{% url 'upload_screenshot' task.id %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label class="form-label">Upload Screenshot</label>
+            <input type="file" name="screenshot" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-success w-100">Submit Task</button>
+    </form>
+</div>
+{% endblock %}
